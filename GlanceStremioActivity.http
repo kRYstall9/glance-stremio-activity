@@ -1,0 +1,6 @@
+@GlanceStremioActivity_HostAddress = http://localhost:5287
+
+GET {{GlanceStremioActivity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

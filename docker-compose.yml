@@ -1,0 +1,14 @@
+services:
+  glance-stremio-activity:
+    build: .
+    container_name: glance-stremio-activity
+    ports:
+      - "5000:8080"
+    environment:
+      - API_KEY=your-secret-api-key
+      # Option 1: Specify users directly as an environment variable
+      - STREMIO_USERS={"Users":[{"Email":"user1@example.com","Password":"password1","DisplayName":"User 1"},{"Email":"user2@example.com","Password":"password2","DisplayName":"User 2"}]}
+    # Option 2: Mount a users.json file from your host
+    # volumes:
+    #   - ./users.json:/app/users.json:ro
+    restart: unless-stopped
