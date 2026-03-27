@@ -1,6 +1,6 @@
 services:
   glance-stremio-activity:
-    build: .
+    image: krystall0/glance-stremio-activity:latest
     container_name: glance-stremio-activity
     ports:
       - "5000:8080"

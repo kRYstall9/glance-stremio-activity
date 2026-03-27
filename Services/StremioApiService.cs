@@ -2,7 +2,6 @@
 using GlanceStremioActivity.Enums;
 using GlanceStremioActivity.Models;
 using GlanceStremioActivity.Services.Interfaces;
-using System.Runtime.CompilerServices;
 using System.Text.Json;
 
 namespace GlanceStremioActivity.Services
@@ -62,7 +61,7 @@ namespace GlanceStremioActivity.Services
         {
             var tasks = requests.Select(r => GetActivityAsync(r, type, cancellationToken));
             var results = await Task.WhenAll(tasks);
-            return results.Where(a => a != null).ToList();           
+            return [.. results.Where(a => a != null)];           
         }
     }
 }

@@ -63,7 +63,7 @@ A ready-to-use `docker-compose.yml` is included in the repository.
 
     services:
       glance-stremio-activity:
-        build: .
+        image: krystall0/glance-stremio-activity:latest
         ports:
           - "5000:8080"
         environment:
@@ -80,7 +80,7 @@ Create a `users.json` file on your host, then mount it read-only:
 
     services:
       glance-stremio-activity:
-        build: .
+        image: krystall0/glance-stremio-activity:latest
         ports:
           - "5000:8080"
         environment:
