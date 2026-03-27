@@ -7,7 +7,7 @@
     [
       "@semantic-release/exec",
       {
-        "publishCmd": "docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKERHUB_USERNAME}/glance-stremio-activity:${nextRelease.version} -t ${DOCKERHUB_USERNAME}/glance-stremio-activity:latest --push ."
+        "publishCmd": "docker buildx build --platform linux/amd64,linux/arm64 -t $DOCKERHUB_USERNAME/glance-stremio-activity:${nextRelease.version} -t $DOCKERHUB_USERNAME/glance-stremio-activity:latest --push ."
       }
     ],
     [
