@@ -127,3 +127,30 @@ Fetches the watching activity for all configured users.
 **Example:**
 
     curl -H "token: your-api-key" "http://localhost:5287/activity?type=0"
+
+## Glance Configuration
+The service will return an html displaying this:
+<img width="975" height="347" alt="image" src="https://github.com/user-attachments/assets/4b7cbd93-254a-499b-b0ea-26214b38e8f8" />
+
+Example Glance configuration:
+```
+- type: extension
+  url: http://your-container:your-port/activity
+  cache: 1s
+  allow-potentially-dangerous-html: true
+  headers:
+    token: your-api-token
+  parameters:
+    type: 0
+
+- type: extension
+  url: http://your-container:your-port/activity
+  cache: 1s
+  allow-potentially-dangerous-html: true
+  headers:
+    token: your-api-token
+  parameters:
+    type: 1
+```
+
+
