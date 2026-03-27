@@ -1,0 +1,22 @@
+{
+  "branches": [ "main" ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "docker buildx build --platform linux/amd64,linux/arm64 -t ${DOCKER_USERNAME}/glance-stremio-activity:${nextRelease.version} -t ${DOCKER_USERNAME}/glance-stremio-activity:latest --push ."
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [ "CHANGELOG.md", "package.json" ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]"
+      }
+    ],
+    "@semantic-release/github"
+  ]
+}

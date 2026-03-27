@@ -1,0 +1,30 @@
+{
+  "name": "glancestremioactivity",
+  "version": "1.0.0",
+  "description": "A [Glance](https://github.com/glanceapp/glance) widget that displays your Stremio watching activity.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kRYstall9/glance-stremio-activity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kRYstall9/glance-stremio-activity/issues"
+  },
+  "homepage": "https://github.com/kRYstall9/glance-stremio-activity#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "semantic-release": "^25.0.3"
+  }
+}
