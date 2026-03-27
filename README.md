@@ -131,6 +131,7 @@ Fetches the watching activity for all configured users.
 ## Glance Configuration
 The service will return an html displaying this:
 <img width="975" height="347" alt="image" src="https://github.com/user-attachments/assets/4b7cbd93-254a-499b-b0ea-26214b38e8f8" />
+<img width="976" height="384" alt="image" src="https://github.com/user-attachments/assets/1cb46cfe-1121-43b0-bfbd-5faf0626035e" />
 
 Example Glance configuration:
 ```
